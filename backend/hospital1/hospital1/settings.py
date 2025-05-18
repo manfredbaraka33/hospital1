@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-k@(l_u9eq1-57h5mw+@5-oc(=$eh-7(*qw4y+-kljlv7t+n2+*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -47,13 +47,13 @@ INSTALLED_APPS = [
 
 CORS_ALLOWED_ORIGINS = [
    
-     "http://127.0.0.1:5174",
+     "https://hospital1-drab.vercel.app/",
      "http://localhost:5174",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     
-    "http://127.0.0.1:5174",
+    "https://hospital1-drab.vercel.app/",
      "http://localhost:5174"
      ]
 
@@ -127,10 +127,10 @@ WSGI_APPLICATION = 'hospital1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hospital1',
-        'USER': 'postgres',
-        'PASSWORD': '1234',
-        'HOST': 'localhost',
+        'NAME': 'hospital1_bcye',
+        'USER': 'bigboss',
+        'PASSWORD': 'OxsihkdEMDMRnmtKowONNZpg0WzR35sx',
+        'HOST': 'dpg-d0l03sre5dus73c5p400-a',
         'PORT': '5432'
     }
 }
