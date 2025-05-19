@@ -4,7 +4,7 @@ import { getAccessToken, getRefreshToken, getUser } from "../hooks/user.actions"
 
 // Create an Axios instance with default settings
 const axiosService = axios.create({
-  baseURL: "http://localhost:8001/api", // Update with your API's base URL
+  baseURL: "https://hospital1-drab.vercel.app/api", // Update with your API's base URL
   headers: {
     "Content-Type": "multipart/form-data",
   },
@@ -28,7 +28,7 @@ const refreshAuthLogic = async (failedRequest) => {
         refresh: getRefreshToken(),
       },
       {
-        baseURL: "http://127.0.0.1:8001/api", // Same API base URL
+        baseURL: "https://hospital1-drab.vercel.app/api", // Same API base URL
       }
     );
 
