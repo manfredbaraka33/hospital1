@@ -15,6 +15,7 @@ def send_to_central(sender, instance, created, **kwargs):
         if created:
             # POST when new patient is created
             response = requests.post(central_url, json=data,verify=False )
+            print(f"The data sent is {data}");
         else:
             # PUT when patient is updated (vaccination status or other)
             update_url = f"{central_url2}{instance.external_id}/"
