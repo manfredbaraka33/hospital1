@@ -14,7 +14,7 @@ def send_to_central(sender, instance, created, **kwargs):
         data = PatientSerializer(instance).data
         if created:
             # POST when new patient is created
-            response = requests.post(central_url, json=data)
+            response = requests.post(central_url, json=data,verify=False )
         else:
             # PUT when patient is updated (vaccination status or other)
             update_url = f"{central_url2}{instance.id}/"
