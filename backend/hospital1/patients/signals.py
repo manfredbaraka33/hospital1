@@ -8,8 +8,8 @@ from .serializers import PatientSerializer
 
 @receiver(post_save, sender=Patient)
 def send_to_central(sender, instance, created, **kwargs):
-    central_url = "http://localhost:8000/api/receive-patient/"
-    central_url2 = "http://localhost:8000/api/receive-patient-update/"  
+    central_url = "https://hospital1-backend.onrender.com/api/receive-patient/"
+    central_url2 = "https://hospital1-backend.onrender.com/api/receive-patient-update/"  
     try:
         data = PatientSerializer(instance).data
         if created:
