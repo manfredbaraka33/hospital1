@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className="nav-bar-brand"><Link style={{textDecoration:"none",color:"yellow"}} to='/home'>Hospital1</Link></div>
         <div className='mx-1'>
               <Link  to="/profile">
-                <img className="rounded-circle" style={{ width: "30px", height: "30px" }} src={user?.profile_image} alt={user?.username} />
+                <img className="rounded-circle" style={{ width: "30px", height: "30px" }} src="/download.jpg" alt={user?.username} />
               </Link>
               <Link  style={{textDecoration:"none",color:"white"}} className='mx-2 email' to="/profile"><span>{user?.email}</span></Link>
             </div>
