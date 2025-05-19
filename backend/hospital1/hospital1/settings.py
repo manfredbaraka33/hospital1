@@ -47,13 +47,13 @@ INSTALLED_APPS = [
 
 CORS_ALLOWED_ORIGINS = [
    
-     "https://hospital1-drab.vercel.app/",
+     "https://hospital1-drab.vercel.app",
      "http://localhost:5174",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     
-    "https://hospital1-drab.vercel.app/",
+    "https://hospital1-drab.vercel.app",
      "http://localhost:5174"
      ]
 
