@@ -37,7 +37,7 @@ const Home = () => {
       setsearching(true);
       setLoading(true);
       if (searchQuery.trim() !== "") {
-        fetch(`http://localhost:8001/api/search/?query=${searchQuery}`)
+        fetch(`https://hospital1-backend.onrender.com/api/search/?query=${searchQuery}`)
           .then((response) => response.json())
           .then((data) => {
             setSearchResults(data.results);
