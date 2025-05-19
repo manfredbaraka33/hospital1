@@ -1,4 +1,9 @@
 from django.db import models
+import uuid
+
+def make_ext_id():
+    return f"hospital1-{uuid.uuid4().hex[:8]}"
+
 
 class Patient(models.Model):
     GENDER_CHOICES = [
@@ -19,7 +24,12 @@ class Patient(models.Model):
         
         
     ]
-    
+    external_id = models.CharField(
+        max_length=20,
+        unique=True,
+        default=make_ext_id,
+        editable=False,
+    )
     # Patient Demographics
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
