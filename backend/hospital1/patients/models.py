@@ -24,13 +24,7 @@ class Patient(models.Model):
         
         
     ]
-    external_id = models.CharField(
-        max_length=20,
-        unique=True,
-        default=make_ext_id,
-        editable=False,
-    )
-    # Patient Demographics
+    external_id = models.CharField(max_length=20,unique=False,default=make_ext_id,null=True,blank=True,editable=False)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
