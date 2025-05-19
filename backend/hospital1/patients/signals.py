@@ -25,7 +25,7 @@ def send_to_central(sender, instance, created, **kwargs):
             action = "Created" if created else "Updated"
             print(f"✅ {action} patient synced: {instance.first_name} {instance.last_name}")
         else:
-            print(f"❌ Sync failed with status {response.status_code}")
+            print(f"❌ Sync failed with status {response.status_code}, {response}")
     except Exception as e:
         print("🚨 Error syncing with central:", e)
 
