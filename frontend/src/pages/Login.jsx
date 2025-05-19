@@ -19,10 +19,10 @@ const Login = () => {
     setError(null);
     setLoading(true); // Start loading
     try {
-      const response = await axios.post("https://hospital1-drab.vercel.app/api/token/", { username, password });
+      const response = await axios.post("https://hospital1-backend.onrender.com/api/token/", { username, password });
       const { access, refresh } = response.data;
 
-      const userDetailsResponse = await axios.get("https://hospital1-drab.vercel.app/api/user/details/", {
+      const userDetailsResponse = await axios.get("https://hospital1-backend.onrender.com/api/user/details/", {
         headers: { Authorization: `Bearer ${access}` },
       });
       console.log(userDetailsResponse);
